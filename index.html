@@ -1,124 +1,103 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cukiernia Słodkie Marzenia</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #ff9999;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #ff6666;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 0;
-            background-image: url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2em;
-        }
-        .gallery {
-            padding: 20px 0;
-            text-align: center;
-        }
-        .gallery h2 {
-            text-align: center;
-        }
-        .gallery img {
-            margin: 0 auto;
-            width: 80%;
-            height: auto;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ff6666;
-            color: white;
-        }
-    </style>
+    <title>Cukiernia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Cukiernia Słodkie Marzenia</h1>
+        <div class="container">
+            <h1>Nasza Cukiernia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Strona główna</a></li>
+                    <li><a href="#products">Produkty</a></li>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#home">Strona Główna</a>
-        <a href="#about">O Nas</a>
-        <a href="#gallery">Galeria</a>
-        <a href="#contact">Kontakt</a>
-    </nav>
-    <section class="hero" id="home">
-        <h1>Witaj w naszej cukierni</h1>
-        <p>Odkryj nasze pyszne wypieki i słodkości</p>
-    </section>
-    <section class="container" id="about">
-        <h2>O Nas</h2>
-        <p>Jesteśmy rodzinna cukiernią z wieloletnią tradycją. Nasze wypieki są przygotowywane z najwyższej jakości składników, aby zapewnić Ci niezapomniane doznania smakowe.</p>
-    </section>
-    <section class="gallery" id="gallery">
-        <h2>Galeria</h2>
-        <div class="carousel">
-            <div><img src="https://as2.ftcdn.net/v2/jpg/12/81/95/79/1000_F_1281957914_wLeHv4lA9mjdNpzaLqiJOVemQXc7pE5B.jpg" alt="Ciastko"></div>
-            <div><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tort"></div>
-            <div><img src="https://as1.ftcdn.net/v2/jpg/05/84/24/44/1000_F_584244417_5DpSee5Te5rQx8fCLvja9S7DbAFr7k61.jpg" alt="Ciasto"></div>
-            <div><img src="https://as2.ftcdn.net/v2/jpg/02/10/29/81/1000_F_210298186_4FLqNdRDPBK00OMZM1JH5w3RfalkYN4S.jpg" alt="Ciasteczka"></div>
-            <div><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deser"></div>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Najlepsze słodkości w mieście</h2>
+            <p>Odkryj nasze wyjątkowe wyroby cukiernicze</p>
         </div>
     </section>
-    <section class="container" id="contact">
-        <h2>Kontakt</h2>
-        <p>Adres: ul. Słodka 123, 00-001 Warszawa</p>
-        <p>Telefon: 123 456 789</p>
-        <p>Email: kontakt@slodkiemarzenia.pl</p>
+
+    <section class="products">
+        <div class="product-filters">
+            <button class="active" data-category="ciasta">Ciasta</button>
+            <button data-category="ciasteczka">Ciasteczka</button>
+            <button data-category="desery">Desery</button>
+        </div>
+        <div class="container">
+            <div class="product-card" data-category="ciasta">
+                <img src="owoceleśnie.jpg" alt="Ciasto"class="product-image">
+                <h3>Ciasto z owoców leśnych</h3>
+            </div>
+            <div class="product-card" data-category="ciasta">
+                <img src="cytrynowe.jpg" alt="Ciasto"class="product-image">
+                <h3>Ciasto cytrynowe</h3>
+            </div>
+            <div class="product-card" data-category="ciasteczka">
+                <img src="biszkopt.jpg" alt="Ciasteczka" class="product-image">
+                <h3>Ciasteczka biszkoptowe</h3>
+            </div>
+            <div class="product-card" data-category="ciasteczka">
+                <img src="babeczki.jpg" alt="Ciasteczka" class="product-image">
+                <h3>Babeczki czekoladowe</h3>
+            </div>
+            <div class="product-card" data-category="desery">
+                <img src="maka.jpg" alt="Ciasteczka" class="product-image">
+                <h3>Makaroniki</h3>
+            </div>
+            <div class="product-card" data-category="desery">
+                <img src="tarta.jpg" alt="Ciasteczka" class="product-image">
+                <h3>Tarta</h3>
+            </div>
+            <!-- Dodaj więcej kart produktów według potrzeb -->
+        </div>
     </section>
-    <footer>
-        <p>&copy; 2023 Cukiernia Słodkie Marzenia. Wszelkie prawa zastrzeżone.</p>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+   <footer>
+        <div class="container">
+            <p>&copy; 2025 Nasza Cukiernia. Wszelkie prawa zastrzeżone.</p>
+        </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000
+        document.querySelectorAll('.product-image').forEach(image => {
+            image.addEventListener('click', function() {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('img01');
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = "none";
+        });
+
+        document.querySelectorAll('.product-filters button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.product-filters button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.getAttribute('data-category');
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
     </script>
